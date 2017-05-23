@@ -1,0 +1,29 @@
+
+// .about-hero-container {
+//     margin: auto;
+// }
+
+.about-hero-banner {
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("about-hero.jpg") no-repeat top;   
+    height: 975px;
+    background-size: cover;   
+    margin-bottom: 4.5rem;
+}
+
+.about-text {
+    color: white;
+    text-align: right;
+}
+
+.story {
+    width: 1120px;
+}
+
+.team {
+    width: 1120px;
+}
+
+.para {
+    text-align: center;
+}

@@ -1,0 +1,86 @@
+.hero-banner {
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("home-hero.jpg") no-repeat top;   
+    height: 975px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;    
+    margin-bottom: 4.5rem;
+}
+
+.shop {
+    margin: auto;
+    width: 1120px;
+    text-align: center;
+    margin-bottom: 4.5rem;
+
+    h1 {
+        margin-bottom: 3.75rem;
+    }
+}
+
+
+.shop-items {
+    display: flex;
+ 
+    img {
+    height: 70px;
+    width: 70px;
+    }
+}
+
+.wrapper {
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    padding: 1rem;
+   
+    &:hover {
+        border-color: #d99054;
+    }
+    a {
+        padding: 0.75rem 1rem;
+        background-color: #248A83;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: #19625d;
+    }
+}
+
+// wrapper a:hover{
+//     background-color: #19625d;
+// }
+
+.shop-items 
+
+.do {
+    margin-right: 0.65rem;
+}
+
+.eat {
+    margin: 0 0.65rem;
+}
+
+.sleep {
+    margin: 0 0.65rem;
+}
+
+.wear {
+    margin-left: 0.65rem;
+}
+
+// Journal
+
+.journal {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+// Adventures
+
+.adventures {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+

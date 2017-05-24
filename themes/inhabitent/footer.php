@@ -7,16 +7,16 @@
 
 ?>
 
-			</div><!-- #content -->
+			</div> <!--#content--> 
+			<div id="page" class="hfeed site">
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info">
+				<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- #page -->
-
-		<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 	</body>
 </html>

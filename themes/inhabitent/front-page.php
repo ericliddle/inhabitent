@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href=<?php echo get_template_directory_uri() . '/build/css/style.min.css' ?> rel="stylesheet">
-    <title>Inhabitent - Just Another Hipster Camping Gear Site</title>
-</head>
-<body>
+    <?php get_header(); ?>
+
     <div class = "hero container">
     </div>
     <div class = "hero-banner">
@@ -41,9 +33,52 @@
     <div class = "journal">
         <h1>INHABITENT JOURNAL</h1>
     </div>
+    <div class = "featured">
+        <?php
+        query_posts('posts_per_page=3');
+        if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+            <img src=<?php echo the_post_thumbnail_url(); ?>>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+            <p><a href="<?php the_permalink(); ?>">Read Entry</a></p>
+        <?php endwhile; ?> 
+        <?php wp_reset_postdata(); ?>
+    </div>
+
+<!-- Products -->
+<?php
+$args = array(
+   'order' => 'ASC',
+   'posts_per_page' => 8,
+//    'post_type' => 'product',
+);
+$products = new WP_Query( $args );
+?>
+
+<?php $products = new WP_Query( $args ); /* $args set above*/ ?>
+<?php if ( $products->have_posts() ) : ?>
+   <?php while ( $products->have_posts() ) : $products->the_post(); ?>
+<ul class ="home posts">
+<li><?php the_post_thumbnail(); ?></li>
+<li><?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 Comments', '1 Comment', '% Comments');?></li>
+      <li><h3><?php the_title(); ?></h3></li>
+      <li><a class="read-more" href="<?php the_permalink(); ?>">Read Entry</a></li>
+    </ul>
+
+      <!--<h1><?php the_title(); ?></h1>-->
+      <!--<?php the_content(); ?>-->
+      <?php the_excerpt();?>
+   <?php endwhile; ?>
+   <?php the_posts_navigation(); ?>
+   <?php wp_reset_postdata(); ?>
+<?php else : ?>
+      <h2>Nothing found!</h2>
+<?php endif; ?>
+
+
     <div class = "adventures">
         <h1>LATEST ADVENTURES</h1>
     </div>
-</body>
-</html>
+
+        <?php get_footer();?>
+
 

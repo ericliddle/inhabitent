@@ -687,6 +687,7 @@ object {
 .hero-banner {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("home-hero.jpg") no-repeat top;
   height: 975px;
+  width: 100%;
   background-size: cover;
   display: -ms-flexbox;
   display: flex;
@@ -744,18 +745,5 @@ object {
   text-align: center;
   margin-bottom: 4.5rem; }
 
-.about-hero-banner {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("about-hero.jpg") no-repeat top;
-  height: 975px;
-  background-size: cover;
-  margin-bottom: 4.5rem; }
-
-.about-text {
-  color: white;
-  text-align: center; }
-
-.story {
-  width: 1120px; }
-
-.team {
-  width: 1120px; }
+.featured img {
+  max-height: 250px; }

@@ -1,3 +1,9 @@
+<?php
+/**
+*Templage Name: About Page
+*/
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +15,9 @@
 </head>
 <body>
     <!--<div class = "about-hero container">-->
-        <div class = "about-hero-banner">
+        <!--<div class = "about-hero-banner">-->
             <h1 class = "about-text"><?php echo "ABOUT" ?></h1>
-        </div>
+        <!--</div>-->
     <!--</div>-->
     <div class = "story para">
         <h2><?php echo "OUR STORY"?></h2>

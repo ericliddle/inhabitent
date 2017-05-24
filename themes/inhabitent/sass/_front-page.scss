@@ -2,6 +2,7 @@
     background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                 url("home-hero.jpg") no-repeat top;   
     height: 975px;
+    width: 100%;
     background-size: cover;
     display: flex;
     justify-content: center;    
@@ -84,3 +85,9 @@
     margin-bottom: 4.5rem;
 }
 
+
+
+// Journal
+.featured img {
+    max-height: 250px;
+}

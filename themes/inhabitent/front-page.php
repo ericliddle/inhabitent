@@ -32,48 +32,37 @@
     </div>
     <div class = "journal">
         <h1>INHABITENT JOURNAL</h1>
-    </div>
-    <div class = "featured">
-        <?php
-        query_posts('posts_per_page=3');
-        if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-            <img src=<?php echo the_post_thumbnail_url(); ?>>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
-            <p><a href="<?php the_permalink(); ?>">Read Entry</a></p>
-        <?php endwhile; ?> 
-        <?php wp_reset_postdata(); ?>
-    </div>
+     </div>
+<div class = "journal-posts">   
+<!-- Journal -->
+    <?php  
+    $args = array(
+    'order' => 'DESC',
+    'posts_per_page' => 3,
+    //    'post_type' => 'product',
+    );
+    $products = new WP_Query( $args );
+    ?>
 
-<!-- Products -->
-<?php
-$args = array(
-   'order' => 'ASC',
-   'posts_per_page' => 8,
-//    'post_type' => 'product',
-);
-$products = new WP_Query( $args );
-?>
 
-<?php $products = new WP_Query( $args ); /* $args set above*/ ?>
-<?php if ( $products->have_posts() ) : ?>
-   <?php while ( $products->have_posts() ) : $products->the_post(); ?>
-<ul class ="home posts">
-<li><?php the_post_thumbnail(); ?></li>
-<li><?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 Comments', '1 Comment', '% Comments');?></li>
-      <li><h3><?php the_title(); ?></h3></li>
-      <li><a class="read-more" href="<?php the_permalink(); ?>">Read Entry</a></li>
-    </ul>
+    <?php $products = new WP_Query( $args ); /* $args set above*/ ?>
+    <?php if ( $products->have_posts() ) : ?>
+    <?php while ( $products->have_posts() ) : $products->the_post(); ?>
+ <div class = "post-list-item">   
+    <div class = "thumb-image"><?php the_post_thumbnail(array(356));?></div>
+    <p class = "time-date"><?php the_time('F jS, Y'); ?> / 
+    <?php comments_popup_link('0 Comments', '1 Comment', '% Comments');?></p>
+    <h3><a href="#"><?php the_title();?></h3>
+    <a href="<?php the_permalink(); ?>">Read Entry</a></div>  
 
-      <!--<h1><?php the_title(); ?></h1>-->
-      <!--<?php the_content(); ?>-->
-      <?php the_excerpt();?>
-   <?php endwhile; ?>
-   <?php the_posts_navigation(); ?>
-   <?php wp_reset_postdata(); ?>
-<?php else : ?>
-      <h2>Nothing found!</h2>
-<?php endif; ?>
-
+    <?php endwhile; ?>
+    <?php the_posts_navigation(); ?>
+    <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+    <h2>Nothing found!</h2>
+    <?php endif; ?>
+</div>    
+</div> <!--Journal-posts-->
 
     <div class = "adventures">
         <h1>LATEST ADVENTURES</h1>
@@ -82,3 +71,49 @@ $products = new WP_Query( $args );
         <?php get_footer();?>
 
 
+ <!--<div class = "featured">
+        <?php
+        query_posts('posts_per_page=3');
+        if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+            <div class = "journal-posts">
+            <img src=<?php echo the_post_thumbnail_url(); ?>>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+            <p><a href="<?php the_permalink(); ?>">Read Entry</a></p>            
+            </div>
+        <?php endwhile; ?> 
+        <?php wp_reset_postdata(); ?>
+        </div>
+    </div>-->
+
+    <!-- Keeping for later...maybe-->
+     <!--<h1><?php the_title(); ?></h1>-->
+      <!--<?php the_content(); ?>-->
+      <!--<?php the_excerpt();?>-->
+
+
+    <div class = "adventures">
+        <h1>LATEST ADVENTURES</h1>
+    </div>
+
+
+    <?php $product_types = get_terms(array (
+        'taxonomoy' => 'proudct_type',
+        'hide_empty'=>false
+    )); 
+    
+
+    
+if( !empty($product_types) && !is_wp_error($product_type)) : ?>
+    <?php foreach ( $product_types as $product_type ) : ?>
+
+    <pre><?php print_r ($product_type); ?></pre>
+    <?php echo $product_type->description; ?>
+    <a href="<?php echo get_term_link($product_type);?>">
+    <h3><?php echo $proudct_type->name;?> </h3>
+    </a>
+    <?php endforeach; ?>
+    <?php endif; ?>
+
+
+
+        <?php get_footer(); ?>

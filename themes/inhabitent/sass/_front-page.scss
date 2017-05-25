@@ -78,16 +78,43 @@
     margin-bottom: 4.5rem;
 }
 
-// Adventures
-
+.journal-posts {
+    width: 1120px;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+}
 .adventures {
     text-align: center;
     margin-bottom: 4.5rem;
 }
 
-
-
-// Journal
-.featured img {
-    max-height: 250px;
+.post-list-item {
+    flex: 0 1 32%;
 }
+
+.time-date {
+    margin: 0 auto;
+}
+
+
+
+
+
+<?php
+        $product_types = get_terms(array (
+          'taxonomy' => 'product_type',
+          'hide_empty' => 0
+        ));
+        if (!empty($product_types) && !is_wp_error($product_types)) : ?>
+        <!-- Put markup here -->
+          <?php foreach ($product_types as $product_type) : ?>
+            <!-- Put more markup here -->
+            <!--<pre><?php print_r($product_type); ?></pre>
+            <?php echo $product_type->description; ?>-->
+            <a href="<?php echo get_term_link($product_type);?>">
+              <h3><?php echo $product_type->name;?></h3>
+            </a>
+          <?php endforeach; ?>
+        <?php endif; ?>
+    

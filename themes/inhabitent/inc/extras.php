@@ -55,7 +55,28 @@ add_filter( 'login_headerurl', 'the_url' );
 * Customeize the titel attribute for the login logo link.$_COOKIE*
 * @return string
 */
+
+
+/**
+* Filter the Product Post type Archive
+*/
+
 function inhabitent_login_title() {
 	return 'Inhabitent';
 }
+
 add_filter( 'login_headertitle', 'inhabitent_login_title' );
+
+		function inhabitent_my_home_category( $query ) {
+			if(
+				( is_post_type_archive(array('product') ) || $query->is_tax('product-type'))
+			&& !is_admin() 
+			&& $query->is_main_query() 
+			) {
+				$query->set( 'posts_per_page', 16);
+				$query->set('orderby','title');
+				$query->set( 'order', ASC);
+			} 
+		} 
+	
+		add_action( 'pre_get_posts', 'inhabitent_my_home_category' );

@@ -1,28 +1,23 @@
-<!-- Journal -->
-    <?php  
-    $args = array(
-    'order' => 'ASC',
-    'post_type' => 'product',
-    );
-    $products = new WP_Query( $args );
-    ?>
-
-
-    <?php $products = new WP_Query( $args ); /* $args set above*/ ?>
-    <?php if ( $products->have_posts() ) : ?>
-    <?php while ( $products->have_posts() ) : $products->the_post(); ?>
- <div class = "post-list-item">   
-    <div class = "thumb-image"><?php the_post_thumbnail(array(356));?></div>
-    <p class = "time-date"><?php the_time('F jS, Y'); ?> / 
-    <?php comments_popup_link('0 Comments', '1 Comment', '% Comments');?></p>
-    <h3><a href="#"><?php the_title();?></h3>
-    <a href="<?php the_permalink(); ?>">Read Entry</a></div>  
-
-    <?php endwhile; ?>
-    <?php the_posts_navigation(); ?>
-    <?php wp_reset_postdata(); ?>
-    <?php else : ?>
-    <h2>Nothing found!</h2>
-    <?php endif; ?>
-</div>    
-</div> <!--Journal-posts-->
+<?php
+/**
+ * Template part for displaying posts.
+ *
+ * @package RED_Starter_Theme
+ */
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <header class="entry-header">
+        <?php if ( has_post_thumbnail() ) : ?>
+            <?php the_post_thumbnail( 'large' ); ?>
+        <?php endif; ?>
+        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+        <?php if ( 'post' === get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+    </header><!-- .entry-header -->
+    <div class="entry-content">
+        <?php the_excerpt(); ?>
+    </div><!-- .entry-content -->
+</article><!-- #post-## -->

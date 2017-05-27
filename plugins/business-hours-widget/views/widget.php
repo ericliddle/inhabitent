@@ -18,5 +18,5 @@
     <p>
         <span class = "business-days">Monday-Friday:</span> <?php echo $sunday; ?>
     </p>
-    
+
 <?php endif; ?>

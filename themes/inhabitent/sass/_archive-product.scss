@@ -1,0 +1,26 @@
+.journal-page {
+    max-width: 1120px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.journal-header {
+    display: flex;
+    justify-content: center;   
+    
+}
+
+.tax-link {
+    margin: 0 1.5rem;
+
+    a {
+    font-size: 1.2rem;
+    color: #248A83;
+    text-decoration: none;
+    }
+
+    a:hover {
+        color: #2f1339;
+    }
+}

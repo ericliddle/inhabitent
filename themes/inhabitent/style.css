@@ -695,33 +695,39 @@ object {
       justify-content: center;
   margin-bottom: 4.5rem; }
 
-.shop {
+.shop-stuff {
   margin: auto;
   width: 1120px;
   text-align: center;
   margin-bottom: 4.5rem; }
-  .shop h1 {
+  .shop-stuff h1 {
     margin-bottom: 3.75rem; }
 
-.shop-items {
+.shop-stuff-items {
   display: -ms-flexbox;
-  display: flex; }
-  .shop-items img {
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .shop-stuff-items img {
     height: 70px;
     width: 70px; }
 
-.wrapper {
+.shop-stuff-wrapper {
   border: 1px solid #e1e1e1;
   border-top-width: 5px;
-  padding: 1rem; }
-  .wrapper:hover {
+  padding: 1rem;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .shop-stuff-wrapper:hover {
     border-color: #d99054; }
-  .wrapper a {
+  .shop-stuff-wrapper p {
+    max-width: 230px; }
+  .shop-stuff-wrapper a {
     padding: 0.75rem 1rem;
     background-color: #248A83;
     color: #ffffff;
     text-decoration: none; }
-  .wrapper a:hover {
+  .shop-stuff-wrapper a:hover {
     background-color: #19625d; }
 
 .shop-items
@@ -767,3 +773,62 @@ object {
   background-color: transparent;
   border-bottom: 0;
   position: absolute; }
+
+.footer-container {
+  background: url("../../images/dark-wood@2x.png");
+  display: -ms-flexbox;
+  display: flex;
+  height: 355px; }
+  .footer-container h1 {
+    color: #d99054;
+    font-size: 1.2rem; }
+    .footer-container h1 p {
+      color: white;
+      font-size: 1rem; }
+  .footer-container .contact-info {
+    padding: 2rem 2rem 2rem 6rem;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    color: white; }
+  .footer-container span {
+    padding-right: 1rem;
+    font-size: 1.2rem; }
+  .footer-container .business-hours {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    color: white; }
+  .footer-container .day {
+    font-weight: bold; }
+
+.about-title {
+  height: 975px;
+  width: 100%;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 4.5rem; }
+
+.journal-page {
+  max-width: 1120px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase; }
+
+.journal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.tax-link {
+  margin: 0 1.5rem; }
+  .tax-link a {
+    font-size: 1.2rem;
+    color: #248A83;
+    text-decoration: none; }
+  .tax-link a:hover {
+    color: #2f1339; }

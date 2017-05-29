@@ -30,6 +30,8 @@ get_header(); ?>
                     <div class = "tax-link">
                         <a class="shop-links" href="<?php echo get_term_link($product_type)?>">
 							<?php echo $product_type->name?></a>
+							
+		
                     </div>
 
                     <?php endforeach; ?>
@@ -39,23 +41,24 @@ get_header(); ?>
 
 			<!--<?php /* Start the Loop */ ?>-->
 
-			
+		<div class= "article-container">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/archive-product-content' );
+					
 				?>
 
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php get_template_part( 'template-parts/archive-product-content', 'none' ); ?>
 
-		<?php endif; ?>
-
+			<?php endif; ?>
+		</div>	
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

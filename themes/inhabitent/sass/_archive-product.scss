@@ -15,12 +15,36 @@
     margin: 0 1.5rem;
 
     a {
-    font-size: 1.2rem;
-    color: #248A83;
-    text-decoration: none;
+        font-size: 1.2rem;
+        color: #248A83;
+        text-decoration: none;
     }
 
     a:hover {
         color: #2f1339;
     }
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1120px;
+}
+
+.entry-header {
+    display: flex;
+    margin: 0 auto;  
+    justify-content: space-between;   
+}
+
+.product-thumbnail {
+    border: 1px solid #e1e1e1;
+    height: 250px;
+
+    
+}
+
+.product-info {
+    border: 1px solid #e1e1e1;
 }

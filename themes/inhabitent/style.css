@@ -822,6 +822,9 @@ object {
       justify-content: center;
   margin-bottom: 4.5rem; }
 
+.title-container {
+  width: 100%; }
+
 .journal-page {
   max-width: 1120px;
   text-align: center;

@@ -76,5 +76,15 @@
         <div class = "adventures">
             <h1>LATEST ADVENTURES</h1>
         </div>
-
+        <div class="adventures-container">
+        <ul class="adventure-container-left">
+            <li class="nature"><div class="story-wrapper"><h3><a href="">Getting Back to Nature in a Canoe</a></h3><a href="">READ MORE</a></li>
+        </ul>
+        <ul class="adventure-container-right">
+            <li class="night"><h3><a href="">A Night with Friends at the Beach</a></h3><a href="">READ MORE</a></li>
+            <li class="view"><h3><a href="">Taking in the View at Big Mountain</a></h3><a href="">READ MORE</a></li>
+            <li class="sky"><h3><a href="">Star-Gazing at the Night Sky</a></h3><a href="">READ MORE</a></li>
+        </ul>
+        </div>
+        <a href="">Read More</a>
             <?php get_footer();?>

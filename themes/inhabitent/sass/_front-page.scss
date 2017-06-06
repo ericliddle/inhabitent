@@ -57,10 +57,6 @@
     }
 }
 
-// wrapper a:hover{
-//     background-color: #19625d;
-// }
-
 .shop-items 
 
 .do {
@@ -105,24 +101,76 @@
     margin: 0 auto;
 }
 
+ .adventure-container {
+    width: 560px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+ }
 
+.adventures-container {
+    max-width: 1120px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.adventure-container-left {
+    display: flex;
+    width: 560px;
+    height: 540px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-
-// <?php
-//         $product_types = get_terms(array (
-//           'taxonomy' => 'product_type',
-//           'hide_empty' => 0
-//         ));
-//         if (!empty($product_types) && !is_wp_error($product_types)) : ?>
-//         <!-- Put markup here -->
-//           <?php foreach ($product_types as $product_type) : ?>
-//             <!-- Put more markup here -->
-//             <!--<pre><?php print_r($product_type); ?></pre>
-//             <?php echo $product_type->description; ?>-->
-//             <a href="<?php echo get_term_link($product_type);?>">
-//               <h3><?php echo $product_type->name;?></h3>
-//             </a>
-//           <?php endforeach; ?>
-//         <?php endif; ?>
+.nature {
+    background: url("http://tent.academy.red/wp-content/uploads/2016/04/canoe-girl.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 540px;
+    width: 540px;
     
+}
+
+.adventure-container-right {
+    display: flex;
+    width: 560px;
+    height: 540px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.night {
+    background: url("http://tent.academy.red/wp-content/uploads/2016/04/beach-bonfire-1024x683.jpg");
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 250px;
+    width: 560px;  
+}
+
+.view {
+    background: url("http://tent.academy.red/wp-content/uploads/2016/04/mountain-hikers-1024x683.jpg");
+    margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 270px;
+    width: 270px; 
+}
+
+.sky {
+    background: url("http://tent.academy.red/wp-content/uploads/2016/04/night-sky-1024x683.jpg");
+    margin-left: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 270px;
+    width: 270px;
+}

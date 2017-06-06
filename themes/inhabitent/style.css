@@ -589,9 +589,12 @@ a {
 .sticky {
   display: block; }
 
-.hentry {
+article.type-product {
   margin: 0 0 1.5rem;
   width: 24%; }
+
+.search-results article {
+  width: 100% !important; }
 
 .updated:not(.published) {
   display: none; }
@@ -767,7 +770,101 @@ object {
 .time-date {
   margin: 0 auto; }
 
+.adventure-container {
+  width: 560px;
+  list-style-type: none;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.adventures-container {
+  max-width: 1120px;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto; }
+
+.adventure-container-left {
+  display: -ms-flexbox;
+  display: flex;
+  width: 560px;
+  height: 540px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.nature {
+  background: url("http://tent.academy.red/wp-content/uploads/2016/04/canoe-girl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 540px;
+  width: 540px; }
+
+.adventure-container-right {
+  display: -ms-flexbox;
+  display: flex;
+  width: 560px;
+  height: 540px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.night {
+  background: url("http://tent.academy.red/wp-content/uploads/2016/04/beach-bonfire-1024x683.jpg");
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 250px;
+  width: 560px; }
+
+.view {
+  background: url("http://tent.academy.red/wp-content/uploads/2016/04/mountain-hikers-1024x683.jpg");
+  margin-right: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 270px;
+  width: 270px; }
+
+.sky {
+  background: url("http://tent.academy.red/wp-content/uploads/2016/04/night-sky-1024x683.jpg");
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 270px;
+  width: 270px; }
+
+#site-naviation {
+  margin: 0 auto;
+  background: transparent; }
+
+.main-navigation {
+  background: transparent;
+  display: -ms-flexbox;
+  display: flex; }
+  .main-navigation .nav-flex-item {
+    -ms-flex: 1 1 550px;
+        flex: 1 1 550px;
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex; }
+    .main-navigation .nav-flex-item a {
+      padding: 0 10px;
+      color: white;
+      text-shadow: 1px 1px 2px #323232; }
+
 .site-header {
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
   background-color: transparent;
   border-bottom: 0;
   width: 100%; }
@@ -775,14 +872,36 @@ object {
 .navigation-bar {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   width: 1120px;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin: auto; }
 
 #tent-logo {
   height: 4.5rem;
   width: 4.5rem;
   position: absolute-right; }
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.search-input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  float: right; }
+
+button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  float: left;
+  color: white; }
 
 .footer-container {
   background: url("../../images/dark-wood@2x.png");
@@ -816,8 +935,6 @@ object {
   height: 975px;
   width: 100%;
   background-size: cover;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   margin-bottom: 4.5rem; }

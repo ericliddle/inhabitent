@@ -25,15 +25,24 @@
 				<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 			<header id="masthead" class="site-header" role="banner">
 				<div class = "navigation-bar">
-				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				</div><!-- .site-branding -->
-				<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
+				
+				
+				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
+
+				<div class="nav-flex-item">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
+				</a>
+				</div>
+				
+				<div class="nav-flex-item">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				<i class="fa fa-search" aria-hidden="true"<?php get_search_form( $echo = true )?>></i>
-				</div>	
+				<i class="nav-search" aria-hidden="true"><?php get_search_form( $echo = true )?></i>
+
+				</div>
+	
 				</nav>
 			
 			</header>

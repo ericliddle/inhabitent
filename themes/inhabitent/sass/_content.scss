@@ -8,9 +8,12 @@
 	display: block;
 }
 
-.hentry {
+article.type-product {
 	margin: 0 0 $base__space-unit;
 	width: 24%;
+}
+.search-results article {
+	width: 100% !important;
 }
 
 .updated:not(.published){

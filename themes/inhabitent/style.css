@@ -915,7 +915,7 @@ button {
       color: white;
       font-size: 1rem; }
   .footer-container .contact-info {
-    padding: 2rem 2rem 2rem 6rem;
+    margin: auto;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     color: white; }
@@ -923,13 +923,23 @@ button {
     padding-right: 1rem;
     font-size: 1.2rem; }
   .footer-container .business-hours {
-    padding-top: 2rem;
-    padding-left: 2rem;
+    margin: auto;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     color: white; }
   .footer-container .day {
     font-weight: bold; }
+
+.footer-image {
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .footer-image img {
+    padding-bottom: 150px; }
 
 .about-title {
   height: 975px;

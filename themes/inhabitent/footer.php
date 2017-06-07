@@ -23,7 +23,7 @@
                     <p><span class="day">Sunday:</span> Closed</p>
                 </div>  
                 <div class = "footer-image">
-                    <a href= "#"> <!--Home Link-->
+                    <a href= "/"> <!--Home Link-->
                         <img src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-text.svg" ?> alt="">
                     </a>
             </div>

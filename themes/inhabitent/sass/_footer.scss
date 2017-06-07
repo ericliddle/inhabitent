@@ -14,7 +14,7 @@
 }
 
 .contact-info {
-  padding:2rem 2rem 2rem 6rem;
+  margin: auto;
   flex-basis:25%;
   color:white;
 }
@@ -27,8 +27,7 @@ span {
 
 
 .business-hours {
-    padding-top: 2rem;
-    padding-left: 2rem;
+    margin: auto;
     flex-basis:25%;
     color:white;
 }
@@ -36,4 +35,15 @@ span {
 .day {
     font-weight: bold;
 }
+}
+
+.footer-image {
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-content: flex-end;
+
+    img {
+        padding-bottom: 150px;
+    }
 }

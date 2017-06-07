@@ -29,10 +29,10 @@
 				
 				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-
+			<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
 				<div class="nav-flex-item">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
+					
 				</a>
 				</div>
 				

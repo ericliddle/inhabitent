@@ -139,19 +139,29 @@
     }
 }
 
-.journal-links {
+.journal-links a {
     font-family: $novecento;
-    font-size: 1.35rem;
-    font-weight: lighter;
-    padding: 0 12px;
-}   
-
-.journal-description {
-    color: #248a83;
+    font-size: 1.5rem;
     text-decoration: none;
+    color: #248a83;
+    margin-bottom: 15px;
+    &:hover {
+        color: #000;
     }
-
-
+}
+    
+.journal-button a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    border: solid 1px #000;
+    padding: 7px;
+    &:hover {
+        background: #248A83;
+        color: #fff;
+        border: none;
+    }
+}
 
 
 
@@ -176,11 +186,22 @@
     flex-wrap: wrap;
  }
 
+.story-wrapper {
+    padding: 0 24px;
+}
+
 .adventures-container {
     max-width: 1120px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    a {
+        color: white;
+        text-decoration: none;
+        font-family: $merriweather;
+        font-size: 3rem;
+        font-weight: lighter;
+    }
 }
 
 .adventure-container-left {
@@ -193,12 +214,14 @@
 }
 
 .nature {
-    background: url("http://tent.academy.red/wp-content/uploads/2016/04/canoe-girl.jpg");
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("http://tent.academy.red/wp-content/uploads/2016/04/canoe-girl.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 540px;
     width: 540px;
+    color: white;
     
 }
 
@@ -213,31 +236,58 @@
 }
 
 .night {
-    background: url("http://tent.academy.red/wp-content/uploads/2016/04/beach-bonfire-1024x683.jpg");
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("http://tent.academy.red/wp-content/uploads/2016/04/beach-bonfire-1024x683.jpg");
     margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 250px;
     width: 560px;  
+    
+    a {
+    font-size: 2.4rem;
+    padding: 0 24px;
+    }
 }
 
 .view {
-    background: url("http://tent.academy.red/wp-content/uploads/2016/04/mountain-hikers-1024x683.jpg");
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("http://tent.academy.red/wp-content/uploads/2016/04/mountain-hikers-1024x683.jpg");
     margin-right: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 270px;
     width: 270px; 
+    a {
+        font-size: 1.6rem;
+    }
 }
 
 .sky {
-    background: url("http://tent.academy.red/wp-content/uploads/2016/04/night-sky-1024x683.jpg");
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("http://tent.academy.red/wp-content/uploads/2016/04/night-sky-1024x683.jpg");
     margin-left: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 270px;
     width: 270px;
+    a {
+        font-size: 1.6rem;
+    }
+}
+
+#adventures-button {
+    font-size: 1rem;
+    font-family: $novecento;
+    border: 1px solid #fff;
+    padding: 12px 18px;
+}
+
+#adventures-button:hover {
+            background: #248A83;
+        color: #fff;
+        border: none;
 }

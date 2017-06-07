@@ -57,18 +57,21 @@
         <?php $products = new WP_Query( $args ); /* $args set above*/ ?>
         <?php if ( $products->have_posts() ) : ?>
         <?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    <div class = "post-list-item">   
-        <div class = "thumb-image">
+    <div class="post-list-item">   
+        <div class="thumb-image">
             <?php the_post_thumbnail(array(356));?>
         </div>
-            <span  class= "time-date">
+            <span class="time-date">
                 <p><?php the_time('F jS, Y'); ?> / 
                 <?php comments_popup_link('0 Comments', '1 Comment', '% Comments');?></p>
             </span>
             <div class="journal-links">
-                <h3><a class="journal-description" href="<?php the_permalink(); ?>"><?php the_title();?></h3>
-                <a class="journal-button" href="<?php the_permalink(); ?>">Read Entry</a>
+                <h3><a href=""><?php the_title();?></a></h3>
             </div>
+            <div class="journal-button">   
+                <a href="<?php the_permalink(); ?>">Read Entry</a>
+            </div>
+            
         </div>  
 
         <?php endwhile; ?>
@@ -85,13 +88,13 @@
         </div>
         <div class="adventures-container">
         <ul class="adventure-container-left">
-            <li class="nature"><div class="story-wrapper"><h3><a href="">Getting Back to Nature in a Canoe</a></h3><a href="">READ MORE</a></li>
+            <li class="nature"><div class="story-wrapper"><h3>  <a href="">Getting Back to Nature in a Canoe</a></h3><a id="adventures-button" href="">READ MORE</a></li>
         </ul>
         <ul class="adventure-container-right">
-            <li class="night"><h3><a href="">A Night with Friends at the Beach</a></h3><a href="">READ MORE</a></li>
-            <li class="view"><h3><a href="">Taking in the View at Big Mountain</a></h3><a href="">READ MORE</a></li>
-            <li class="sky"><h3><a href="">Star-Gazing at the Night Sky</a></h3><a href="">READ MORE</a></li>
+            <li class="night"><h3><a href="">A Night with Friends at the Beach</a></h3><a id="adventures-button" href="">READ MORE</a></li>
+            <li class="view"><h3><a href="">Taking in the View at Big Mountain</a></h3><a id="adventures-button" href="">READ MORE</a></li>
+            <li class="sky"><h3><a href="">Star-Gazing at the Night Sky</a></h3><a id="adventures-button" href="">READ MORE</a></li>
         </ul>
         </div>
-        <a href="">Read More</a>
+        <a href="">More Adventures</a>
             <?php get_footer();?>

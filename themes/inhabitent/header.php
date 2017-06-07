@@ -29,18 +29,13 @@
 				
 				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-			<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img id= "tent-logo" src=<?php echo get_template_directory_uri() . "/images/inhabitent-logo-tent-white.svg" ?> alt="">
+					</a>
 				<div class="nav-flex-item">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					
-				</a>
-				</div>
-				
-				<div class="nav-flex-item">
-				<button class="menu-toggle"  aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				<i class="fa fa-search" aria-hidden="true"><?php get_search_form( $echo = true )?></i>
-
+					<button class="menu-toggle"  aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<i class="fa fa-search" aria-hidden="true"><?php get_search_form( $echo = true )?></i>
 				</div>
 	
 				</nav>

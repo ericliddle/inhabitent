@@ -86,7 +86,7 @@ add_filter( 'login_headertitle', 'inhabitent_login_title' );
 		function about_background(){
     wp_enqueue_style(
         'custom-style',
-        get_template_directory_uri() . 'build/css/style.min.css'
+        get_template_directory_uri() . '/build/css/style.min.css'
     );
         $background = CFS()->get( 'hero_image' ); //E.g. #FF0000
         $custom_css = "

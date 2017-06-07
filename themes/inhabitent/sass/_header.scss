@@ -43,7 +43,7 @@
 
  #tent-logo {
      height: 2.07rem;
-    //  width: 2.07rem;
+     width: 2.07rem;
      position: absolute-right;
  }
 
@@ -67,4 +67,10 @@ button {
     box-shadow: none;
     float: left;
     color: white;
+}
+
+.fa {
+    color: #fff;
+            text-shadow: 1px 1px 2px #323232;
+
 }

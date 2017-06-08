@@ -8,7 +8,7 @@
     </div><!-- #content -->
         <footer id="colophon" class="site-footer" role="contentinfo">
             <div class="site-info">
-            <div class="footer-container">
+                <div class="footer-container">
                 <div class="contact-info">
                     <h1>CONTACT INFO</h1>
                     <p><span class="fa fa-envelope" aria-hidden="true"></span>info@inhabitent.com</p>

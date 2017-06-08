@@ -291,3 +291,22 @@
         color: #fff;
         border: none;
 }
+
+.adventures-end {
+    width: 1120px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    a {
+        padding: 12px 24px;
+        color: #fff;
+        background: #248A83;
+        text-decoration: none;
+        font-family: $novecento;
+        text-transform: uppercase;
+        &:hover {
+            background: #19625d;
+        }
+    }
+}

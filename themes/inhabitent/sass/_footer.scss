@@ -1,7 +1,14 @@
-.footer-container{
+.site-info {
+    margin: 0 auto;
     background: url("../../images/dark-wood@2x.png");
+
+}
+
+.footer-container{
     display:flex;
     height: 355px;
+    width: 1120px;
+    margin: 0 auto;
 
     h1 {
         color:#d99054;

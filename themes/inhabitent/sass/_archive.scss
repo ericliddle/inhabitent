@@ -1,30 +1,32 @@
+.page-title {
+    font-family: $novecento;
+}
 
 .journal-page {
     max-width: 1120px;
     text-align: center;
     margin: 0 auto;
-    text-transform: uppercase;
+    font-family: $merriweather;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-transform: none;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 3rem;
 }
 
 .journal-header {
     display: flex;
-    justify-content: center;       
-}
-
-.shop-links {
-    font-family: $novecento;
-    text-transform: uppercase;
+    justify-content: center;   
+    
 }
 
 .tax-link {
     margin: 0 1.5rem;
-
     a {
         font-size: 1.2rem;
         color: #248A83;
         text-decoration: none;
     }
-
     a:hover {
         color: #2f1339;
     }
@@ -36,6 +38,7 @@
     justify-content: space-between;
     width: 1120px;
     margin: 0 auto;
+    margin-bottom: 3.75rem;
 }
 
 .entry-header {
@@ -47,7 +50,7 @@
 .product-thumbnail {
     border: 1px solid #e1e1e1;
     height: 250px;
-        overflow: hidden;
+    overflow: hidden;
     position: relative;
 
     
@@ -73,7 +76,7 @@
     }
 }
 
-.post-type-archive {
+.type-product {
     p{
         font-size: 1rem;
         margin: 0px;

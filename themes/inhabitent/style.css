@@ -944,6 +944,24 @@ object {
   color: #fff;
   border: none; }
 
+.adventures-end {
+  width: 1120px;
+  margin: 0 auto;
+  height: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .adventures-end a {
+    padding: 12px 24px;
+    color: #fff;
+    background: #248A83;
+    text-decoration: none;
+    font-family: novecentosans, sans-serif;
+    text-transform: uppercase; }
+    .adventures-end a:hover {
+      background: #19625d; }
+
 #site-naviation {
   margin: 0 auto;
   background: transparent; }
@@ -988,7 +1006,7 @@ object {
 
 #tent-logo {
   height: 2.07rem;
-  width: 2.07rem;
+  width: 3.125em;
   position: absolute-right; }
 
 fieldset {
@@ -1014,11 +1032,16 @@ button {
   color: #fff;
   text-shadow: 1px 1px 2px #323232; }
 
+.site-info {
+  margin: 0 auto;
+  background: url("../../images/dark-wood@2x.png"); }
+
 .footer-container {
-  background: url("../../images/dark-wood@2x.png");
   display: -ms-flexbox;
   display: flex;
-  height: 355px; }
+  height: 355px;
+  width: 1120px;
+  margin: 0 auto; }
   .footer-container h1 {
     color: #d99054;
     font-size: 1.2rem; }
@@ -1081,6 +1104,10 @@ button {
   -ms-flex-pack: center;
       justify-content: center; }
 
+.shop-links {
+  font-family: novecentosans, sans-serif;
+  text-transform: uppercase; }
+
 .tax-link {
   margin: 0 1.5rem; }
   .tax-link a {
@@ -1097,7 +1124,8 @@ button {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  width: 1120px; }
+  width: 1120px;
+  margin: 0 auto; }
 
 .entry-header {
   display: -ms-flexbox;
@@ -1108,10 +1136,45 @@ button {
 
 .product-thumbnail {
   border: 1px solid #e1e1e1;
-  height: 250px; }
+  height: 250px;
+  overflow: hidden;
+  position: relative; }
 
 .product-info {
-  border: 1px solid #e1e1e1; }
+  border: 1px solid #e1e1e1;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: merriweather, sans-serif;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  padding: 12px 16px; }
+  .product-info h2 {
+    margin: 0px; }
+    .product-info h2 a {
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0px;
+      color: #000;
+      font-weight: lighter; }
+
+.post-type-archive p {
+  font-size: 1rem;
+  margin: 0px; }
+
+.product-container {
+  position: relative;
+  width: 100%; }
+
+.attachment-large {
+  left: 50%;
+  max-height: 250px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  width: auto; }
 
 .about-text {
   color: white;
@@ -1150,3 +1213,92 @@ button {
   width: 760px;
   border: 1px solid #e1e1e1;
   background: #f4f4f4; }
+
+.page-title {
+  font-family: novecentosans, sans-serif; }
+
+.journal-page {
+  max-width: 1120px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: merriweather, sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: none;
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem; }
+
+.journal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.tax-link {
+  margin: 0 1.5rem; }
+  .tax-link a {
+    font-size: 1.2rem;
+    color: #248A83;
+    text-decoration: none; }
+  .tax-link a:hover {
+    color: #2f1339; }
+
+.article-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 1120px;
+  margin: 0 auto;
+  margin-bottom: 3.75rem; }
+
+.entry-header {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.product-thumbnail {
+  border: 1px solid #e1e1e1;
+  height: 250px;
+  overflow: hidden;
+  position: relative; }
+
+.product-info {
+  border: 1px solid #e1e1e1;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: merriweather, sans-serif;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  padding: 12px 16px; }
+  .product-info h2 {
+    margin: 0px; }
+    .product-info h2 a {
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0px;
+      color: #000;
+      font-weight: lighter; }
+
+.type-product p {
+  font-size: 1rem;
+  margin: 0px; }
+
+.product-container {
+  position: relative;
+  width: 100%; }
+
+.attachment-large {
+  left: 50%;
+  max-height: 250px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  width: auto; }

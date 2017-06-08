@@ -96,5 +96,7 @@
             <li class="sky"><h3><a href="">Star-Gazing at the Night Sky</a></h3><a id="adventures-button" href="">READ MORE</a></li>
         </ul>
         </div>
-        <a href="">More Adventures</a>
+        <div class="adventures-end">
+            <a href="">More Adventures</a>
+        </div>
             <?php get_footer();?>

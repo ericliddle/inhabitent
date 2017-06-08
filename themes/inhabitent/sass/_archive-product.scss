@@ -94,3 +94,11 @@
     transform: translate(-50%, -52%);
     width: auto;
 }
+
+h2.entry-title:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: "..................................";
+    font-size: 1rem;
+}

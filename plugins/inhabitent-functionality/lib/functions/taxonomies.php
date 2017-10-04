@@ -43,4 +43,3 @@ function register_product_type_taxonomy() {
 
 }
 add_action( 'init', 'register_product_type_taxonomy', 0 );
-
